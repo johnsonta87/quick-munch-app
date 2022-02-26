@@ -22,6 +22,10 @@ const CustomStyles = createGlobalStyle`
     height: 100%;
   }
 
+  div#root {
+    width: 100%;
+  }
+
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;

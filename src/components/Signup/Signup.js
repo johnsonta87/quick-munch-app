@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
 // Firebase
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase.config';
 
 // Components
 import Button from '../Common/Button/Button';
 import Message from '../Message/Message';
 
-// Components
+// Styles
 import { AuthenticationStyles } from '../Authentication/authentication.styles';
 
-export default function Login() {
+export default function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -19,16 +19,19 @@ export default function Login() {
   const submit = (e) => {
     e.preventDefault();
 
-    // sign in user from firebase auth
-    signInWithEmailAndPassword(auth, email, password)
+    // sign new user to firebase auth
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         const { user } = userCredential;
 
-        setMessage('');
+        console.log(user);
       })
       .catch((error) => {
-        setMessage(`Sorry, this account does not exist.`);
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        setMessage(`${errorCode}: ${errorMessage}`);
       });
 
     // reset form
@@ -40,7 +43,7 @@ export default function Login() {
     <AuthenticationStyles>
       <input
         type="email"
-        placeholder="Enter email"
+        placeholder="Enter your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
@@ -53,8 +56,8 @@ export default function Login() {
       <Button
         type="button"
         onClick={submit}
-        value="Sign in"
-        disabled={!!(email === '' || password === '')}
+        value="Sign up"
+        disabled={email === '' || password === ''}
       />
 
       {message && <Message value={message} />}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MessageStyles } from './Message.styles';
+import { MessageStyles } from './MessageStyles';
 
 export default function Message({ value }) {
   return <MessageStyles type={value}>{value}</MessageStyles>;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProductListStyles } from '../ProductList.styles';
+import { ProductListStyles } from '../ProductListStyles';
 
 export default function MostPopular() {
   const products = [

@@ -6,7 +6,7 @@ import NavShop from '../Nav/NavShop';
 import Heading from '../Common/Heading/Heading';
 
 // Styles
-import { ShopStyles } from './Shop.styles';
+import { ShopStyles } from './ShopStyles';
 import MostPopular from './MostPopular/MostPopular';
 
 export default function Shop() {

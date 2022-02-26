@@ -9,7 +9,7 @@ import Button from '../Common/Button/Button';
 import Message from '../Message/Message';
 
 // Styles
-import { AuthenticationStyles } from '../Authentication/Authentication.styles';
+import { AuthenticationStyles } from '../Authentication/AuthenticationStyles';
 
 export default function Signup() {
   const [email, setEmail] = useState('');

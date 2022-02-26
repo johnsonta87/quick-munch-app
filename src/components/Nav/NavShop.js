@@ -6,7 +6,7 @@ import {
   AiTwotoneHeart,
   AiOutlineSolution,
 } from 'react-icons/ai';
-import { NavShopStyles } from './NavShop.styles';
+import { NavShopStyles } from './NavShopStyles';
 import NavShopItem from './NavShopItem';
 
 export default function NavShop() {

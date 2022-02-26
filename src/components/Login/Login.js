@@ -9,7 +9,7 @@ import Button from '../Common/Button/Button';
 import Message from '../Message/Message';
 
 // Components
-import { AuthenticationStyles } from '../Authentication/Authentication.styles';
+import { AuthenticationStyles } from '../Authentication/AuthenticationStyles';
 
 export default function Login() {
   const [email, setEmail] = useState('');

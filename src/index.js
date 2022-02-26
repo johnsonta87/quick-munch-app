@@ -9,8 +9,8 @@ import store from './store/store';
 import App from './App';
 
 // Styled Components
-import GlobalStyles from './styles/global.styles';
-import { theme } from './styles/theme.styles';
+import GlobalStyles from './styles/globalStyles';
+import { theme } from './styles/themeStyles';
 
 ReactDOM.render(
   <React.StrictMode>

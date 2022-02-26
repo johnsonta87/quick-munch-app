@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Styles
-import { NavShopItemStyles } from './NavShopItem.styles';
+import { NavShopItemStyles } from './NavShopItemStyles';
 
 export default function NavShopItem({ nav }) {
   return (

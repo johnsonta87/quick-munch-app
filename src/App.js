@@ -8,7 +8,7 @@ import { auth } from './firebase.config';
 import Authentication from './components/Authentication/Authentication';
 
 // Styles
-import { AppContainer } from './styles/app.styles';
+import { AppContainer } from './styles/appStyles';
 import Shop from './components/Shop/Shop';
 
 function App() {

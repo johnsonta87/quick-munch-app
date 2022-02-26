@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ButtonStyles } from './button.styles';
+import { ButtonStyles } from './Button.styles';
 
 export default function Button({ onClick, value, disabled }) {
   return (
@@ -17,6 +17,6 @@ export default function Button({ onClick, value, disabled }) {
 
 Button.propTypes = {
   onClick: PropTypes.func,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.any,
   disabled: PropTypes.bool,
 };

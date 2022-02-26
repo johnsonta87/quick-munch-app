@@ -6,6 +6,8 @@ import {
   AiTwotoneHeart,
   AiOutlineSolution,
 } from 'react-icons/ai';
+import { NavShopStyles } from './NavShop.styles';
+import NavShopItem from './NavShopItem';
 
 export default function NavShop() {
   const list = [
@@ -15,7 +17,15 @@ export default function NavShop() {
     { icon: <AiOutlineSolution /> },
   ];
 
+  if (!list) return null;
+
   return (
-    <ul>{list && list.map((nav, index) => <li key={index}>{nav.icon}</li>)}</ul>
+    <NavShopStyles>
+      <ul>
+        {list.map((nav, index) => (
+          <NavShopItem key={index} nav={nav?.icon} />
+        ))}
+      </ul>
+    </NavShopStyles>
   );
 }

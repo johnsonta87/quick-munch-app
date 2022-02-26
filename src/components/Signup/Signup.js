@@ -9,7 +9,7 @@ import Button from '../Common/Button/Button';
 import Message from '../Message/Message';
 
 // Styles
-import { AuthenticationStyles } from '../Authentication/authentication.styles';
+import { AuthenticationStyles } from '../Authentication/Authentication.styles';
 
 export default function Signup() {
   const [email, setEmail] = useState('');
@@ -30,6 +30,7 @@ export default function Signup() {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
 
         setMessage(`${errorCode}: ${errorMessage}`);
       });

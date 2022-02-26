@@ -6,7 +6,7 @@ import Logo from '../Logo/Logo';
 import Signup from '../Signup/Signup';
 
 // Styles
-import { AuthenticationContainer } from './authentication.styles';
+import { AuthenticationContainer } from './Authentication.styles';
 
 export default function Authentication() {
   const [guest, setGuest] = useState();

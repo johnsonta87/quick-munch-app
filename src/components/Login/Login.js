@@ -9,7 +9,7 @@ import Button from '../Common/Button/Button';
 import Message from '../Message/Message';
 
 // Components
-import { AuthenticationStyles } from '../Authentication/authentication.styles';
+import { AuthenticationStyles } from '../Authentication/Authentication.styles';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -24,10 +24,15 @@ export default function Login() {
       .then((userCredential) => {
         // Signed in
         const { user } = userCredential;
+        console.log(user);
 
         setMessage('');
       })
       .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+
         setMessage(`Sorry, this account does not exist.`);
       });
 

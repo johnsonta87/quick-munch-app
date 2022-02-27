@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const AppContainer = styled.div`
+  background-color: ${(props) => props.theme.whiteColor};
   max-width: 375px;
   width: 100%;
   margin: 1.5em auto;

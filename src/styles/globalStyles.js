@@ -32,6 +32,19 @@ const CustomStyles = createGlobalStyle`
     margin: 0;
   }
 
+  input {
+    padding: 1em;
+    border: 0;
+    background-color: ${(props) => props.theme.lightGrayColor};
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+
+    &:active,
+    &:focus {
+      outline: 0;
+    }
+  }
+
 `;
 
 const GlobalStyles = () => <CustomStyles />;

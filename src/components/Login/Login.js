@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
-// Firebase
+// Redux
+import { useDispatch } from 'react-redux';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+
+// Firebase
 import { auth } from '../../firebase.config';
 
 // Components
@@ -10,11 +13,13 @@ import Message from '../Message/Message';
 
 // Components
 import { AuthenticationStyles } from '../Authentication/AuthenticationStyles';
+import { addUser } from '../../store/reducers/user';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const dispatch = useDispatch();
 
   const submit = (e) => {
     e.preventDefault();
@@ -24,9 +29,7 @@ export default function Login() {
       .then((userCredential) => {
         // Signed in
         const { user } = userCredential;
-        console.log(user);
-
-        setMessage('');
+        dispatch(addUser(user));
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -35,10 +38,6 @@ export default function Login() {
 
         setMessage(`Sorry, this account does not exist.`);
       });
-
-    // reset form
-    setEmail('');
-    setPassword('');
   };
 
   return (

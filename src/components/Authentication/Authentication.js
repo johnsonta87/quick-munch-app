@@ -9,7 +9,7 @@ import Signup from '../Signup/Signup';
 import { AuthenticationContainer } from './AuthenticationStyles';
 
 export default function Authentication() {
-  const [guest, setGuest] = useState();
+  const [guest, setGuest] = useState(true);
 
   return (
     <AuthenticationContainer>

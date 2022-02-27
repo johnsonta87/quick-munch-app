@@ -8,5 +8,10 @@ export const NavShopItemStyles = styled.li`
     padding: 25%;
     background: transparent;
     border: 0;
+
+    svg {
+      width: 1.5em;
+      height: 1.5em;
+    }
   }
 `;
